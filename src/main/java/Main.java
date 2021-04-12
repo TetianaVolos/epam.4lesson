@@ -13,17 +13,22 @@ public class Main {
         //System.out.println(Task3.multiArithmeticElements(5,3,0));
         //System.out.println(Task4.sumGeometricElements(100,0.5,20));
 
-        Rectangle r = new Rectangle(5,5);
+        Rectangle r = new Rectangle(5,7);
+        Rectangle r1 = new Rectangle();
+        Rectangle r2 = new Rectangle(10,10);
 //        System.out.println(r.getSideA());
 //        System.out.println(r.getSideB());
 //        System.out.println(r.isSquare());
 //        System.out.println(r.perimeter());
         //r.replaceSides();
-        ArrayRectangles arr = new ArrayRectangles(2);
-        ArrayRectangles a = new ArrayRectangles(r,r,r);
-
-
-        System.out.println(a.addRectangle(r));
+        ArrayRectangles arr = new ArrayRectangles();
+//        ArrayRectangles a = new ArrayRectangles(r,r1,r2);
+        System.out.println(arr.addRectangle(r));
+        System.out.println(arr.addRectangle(r1));
+        System.out.println(arr.addRectangle(r2));
+        System.out.println(arr.numberMaxArea());
+        System.out.println(arr.numberMinPerimeter());
+        System.out.println(arr.numberSquares());
     }
 
 }

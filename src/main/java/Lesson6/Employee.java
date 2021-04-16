@@ -13,11 +13,11 @@ abstract class Employee {
         this.name = name;
         this.salary = salary;
     }
+    public BigDecimal getBonus(){return bonus;}
     abstract void setBonus(BigDecimal bonus);
+
     public BigDecimal toPay() {
-        if (bonus != null && bonus.intValue() > 0) {
-            return salary.add(bonus);
-        }
-        else throw new IllegalArgumentException();
+        if (bonus == null || bonus.intValue() < 0) throw new IllegalArgumentException();
+        return salary.add(bonus);
     }
 }
